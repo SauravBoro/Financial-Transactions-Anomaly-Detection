@@ -1,0 +1,2 @@
+transaction_id,date,category,amount,reason_for_anomaly
+TRX004,2024-06-02,Food,3000.0,"Outside IQR bounds (-722.5, 2257.5)"
