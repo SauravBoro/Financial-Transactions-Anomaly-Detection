@@ -22,7 +22,7 @@ This project involves developing a system to identify and report anomalies in a 
 2. Update the `file_path` variable in the script to the path of your CSV file:
 
     ```python
-    file_path = '/path/to/your/transactions.csv'
+    file_path = 'transactions.csv'
     ```
 
 3. Run the script:
@@ -47,8 +47,8 @@ This project involves developing a system to identify and report anomalies in a 
 
 ### 3. Anomaly Detection
 
-- **Z-score Calculation:** The script calculates the Z-score for each transaction amount. Transactions with a Z-score greater than 3 or less than -3 are flagged as anomalies.
-- **IQR Calculation:** The script calculates the Interquartile Range (IQR) and flags transactions that fall outside the bounds of Q1 - 1.5*IQR and Q3 + 1.5*IQR as anomalies.
+- **Z-score Calculation:** The script calculates the Z-score for each transaction amount. Transactions with a Z-score greater than 1.5 or less than -1.5 are flagged as anomalies.
+- **IQR Calculation:** The script calculates the Interquartile Range (IQR) and flags transactions that fall outside the bounds of Q1 - 0.5*IQR and Q3 + 0.5*IQR as anomalies.
 - **Flagging Anomalies:** Each flagged transaction is recorded with a reason for why it was flagged.
 
 ### 4. Report Generation
@@ -69,3 +69,4 @@ TRX004,2024-06-02,Food,3000.00  # Anomalous high amount
 TRX005,2024-06-02,Transport,45.00
 TRX006,2024-06-03,Utilities,135.00
 TRX007,2024-06-03,Food,20.00
+```
